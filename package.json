@@ -1,0 +1,18 @@
+{
+    "name": "gitbook-plugin-googledocs",
+    "description": "Replace Google Docs links with embedded iframes",
+    "main": "index.js",
+    "version": "0.0.1",
+    "engines": {
+        "gitbook": "*"
+    },
+    "homepage": "https://github.com/gramener/gitbook-plugin-googledocs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gramener/gitbook-plugin-googledocs.git"
+    },
+    "license": "Apache 2",
+    "bugs": {
+        "url": "https://github.com/gramener/gitbook-plugin-googledocs/issues"
+    }
+}
