@@ -36,8 +36,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
     // Save the plugin configuration
     plugin_config = plugin_config || {}
     config = plugin_config.googledocs || {}
-    // The noembed parameter (if it exists) must be treated as a case-insensitive regex
-    if (config.noembed)
-      config.noembed = new RegExp(config.noembed, "i")
+    // The noembed parameter must be treated as a case-insensitive regex
+    config.noembed = new RegExp(config.noembed || "new window", "i")
   })
 })
