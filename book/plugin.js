@@ -4,7 +4,12 @@ require(["gitbook", "jquery"], function(gitbook, $) {
   gitbook.events.bind("page.change", function() {
     $("a").each(function() {
       var $this = $(this),
-        href = $this.attr("href") || ""
+        href = $this.attr("href") || "",
+        title = $this.attr("title")
+
+      // Ignore links whose title match the noembed parameter
+      if (title && config.noembed && config.noembed.match(title))
+        return
 
       if (href.match("//docs.google.com/") || href.match("//spreadsheets.google.com/")) {
         // Add ?rm=... as a URL argument
@@ -31,5 +36,8 @@ require(["gitbook", "jquery"], function(gitbook, $) {
     // Save the plugin configuration
     plugin_config = plugin_config || {}
     config = plugin_config.googledocs || {}
+    // The noembed parameter (if it exists) must be treated as a case-insensitive regex
+    if (config.noembed)
+      config.noembed = new RegExp(config.noembed, "i")
   })
 })
