@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-googledocs",
   "description": "Replace Google Docs links with embedded iframes",
   "main": "index.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "gitbook": "*"
   },
