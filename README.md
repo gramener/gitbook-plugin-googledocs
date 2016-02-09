@@ -41,3 +41,8 @@ If the link has a title with the words "new window", it does not embed the ifram
 ... will not embed the spreadsheet.
 
 (You can change the string to look for by changing the `noembed=` parameter. The match is case-insensitive.)
+
+## LICENSE
+
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) -- same as
+[gitbook](https://github.com/GitbookIO/gitbook/blob/master/LICENSE)

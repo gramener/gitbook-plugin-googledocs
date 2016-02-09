@@ -8,7 +8,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
         title = $this.attr("title")
 
       // Ignore links whose title match the noembed parameter
-      if (title && config.noembed && config.noembed.match(title))
+      if (title && config.noembed && config.noembed.exec(title))
         return
 
       if (href.match("//docs.google.com/") || href.match("//spreadsheets.google.com/")) {
